@@ -1081,7 +1081,21 @@ support for no js
 
 /* #FEATURES 2-3 #NEW
 =====================================================*/
-
+.grid-cols-5{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: grid;
+  gap: 12px;
+  overflow-wrap: break-word;
+}
+@media screen and (max-width:600px) {
+  .grid-cols-5{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+    gap: 12px;
+    overflow-wrap: break-word;
+  }
+  
+}
 @media only screen and (min-width: 992px) {
   .left-50{
     left:50%;
@@ -1092,8 +1106,12 @@ support for no js
 }
 .fes2-main-text-cont {
   margin: 0 auto;
-  padding: 145px 50px 140px 50px;
-  max-width:500px; 
+  padding:40px 30px;
+  padding:40px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 .fes2-text-cont{
 	margin-top:30px;
@@ -1118,6 +1136,13 @@ support for no js
 	font-family: 'Lato',Arial,Helvetica,sans-serif;
 	font-size: 45px;
 	line-height: 45px;
+	font-weight: 300;
+}
+.title-fs-25 {
+	color:#4b4e53;
+	font-family: 'Lato',Arial,Helvetica,sans-serif;
+	font-size:25px;
+	line-height: 25px;
 	font-weight: 300;
 }
 .fes3-img {
@@ -1201,7 +1226,14 @@ support for no js
 	color:#4b4e53; 
   border-left:#4b4e53 2px solid;
 }
-
+.caps{
+  text-transform: uppercase;
+}
+.flex-center{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
 .p-50-cont{ padding-top:50px; padding-bottom:50px;}
 .p-60-cont{ padding-top:60px; padding-bottom:60px;}
 .p-80-cont{ padding-top:80px; padding-bottom:80px;}
@@ -1268,7 +1300,11 @@ support for no js
 		height:250px;
 	}
 	.fes2-main-text-cont{
-		padding:70px 30px 70px 30px;
+		padding:40px 30px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 	}
 }
 
@@ -1344,10 +1380,37 @@ support for no js
   padding: 0;
   top: 0; 
 }
+.flex{
+  display: flex;
+}
+.justify-center{
+  justify-content: center;
+}
+.items-center{
+  align-items: center;
+}
 .fes7-img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 0;
+  
+  width: 100%;
+  display: block;
+  background-size: cover;
+     
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.fes7-img-2 {
+ 
   width: 100%;
   height: 100%;
   background-position: 50% 50%;
