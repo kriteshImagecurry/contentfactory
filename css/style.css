@@ -1,8 +1,11 @@
 .grey-dark-bg ,.count-number{
   color: #f5f5f5 !important;
 }
+.black-bg{
+  background-color: black !important;
+}
 .homepage-logo-slider{
-  background-color: #303236;
+  background-color: black;
   display: flex;
   justify-content: center;
 }
@@ -13,7 +16,10 @@
 .team-container{
   padding:0 10rem
 }
-
+.mainVideo video{
+  width: 100%;
+  overflow: hidden;
+}
 #loader-overflow{
   display:block;
   width: 100%;
@@ -143,10 +149,10 @@ body {
 	-webkit-text-size-adjust: 100% !important;
 }
 h1,h2,h3,h4,h5{
-	font-family: 'GothamBold','Open Sans', Arial, Helvetica, sans-serif !important; 
+	font-family: 'GothamBold','Open Sans', Arial, Helvetica, sans-serif ; 
 }
 p,span{
-	font-family: 'GothamBook','Open Sans', Arial, Helvetica, sans-serif !important; 
+	font-family: 'GothamBook','Open Sans', Arial, Helvetica, sans-serif ; 
 
 }
 .bold {
@@ -3083,7 +3089,7 @@ select.input-border {
 /* #FOOTER 2 BLACK #NEW
 =====================================================*/
 .footer2-black {
-  background: #141516;
+  background: black;
   color:rgba(255,255,255, .7);
 }
 .footer2-black .widget h4 {
@@ -3669,7 +3675,7 @@ background:none;
 	box-shadow: 0 1px 15px rgba(0,0,0, .15);
 }
 .affix.black-header .header-wrapper {
-	background: #303236;
+	background: black !important;
 }
 #nav-below.header {
 	position:relative;
@@ -7899,7 +7905,7 @@ h2.portfolio-timeline-title {
     margin-bottom:0px; 
   }
   .header.black-header.mobile-no-transparent {
-    background:#303236;
+    background:black;
   }
   .header .right-box-wrapper {
     text-align: right;
