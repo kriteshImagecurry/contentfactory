@@ -165,7 +165,10 @@ Site: https://themeforest.net/user/abcgomel/portfolio
 /* #PRELOADER  ============================================== */
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
+.grey-dark-bg ,.count-number{
+  color: #eee !important;
 
+}
 #loader-overflow{
   display:block;
   width: 100%;
