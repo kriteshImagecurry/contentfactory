@@ -71,7 +71,7 @@
       <div class="grey-bg">
         <header
           id="nav"
-          class="header header-1 no-transparent mobile-no-transparent affix"
+          class="header header-1 black-header mobile-no-transparent"
         >
           <div class="header-wrapper">
             <div class="container-m-30 clearfix">
@@ -111,7 +111,7 @@
                     <nav class="collapse collapsing navbar-collapse right-1024">
                       <ul class="nav navbar-nav">
                         <!-- MENU ITEM -->
-                        <li class="parent">
+                        <li class="parent current">
                           <a href="index.html"
                             ><div class="main-menu-title">HOME</div></a
                           >
@@ -135,13 +135,13 @@
                             ><div class="main-menu-title">WORK</div></a
                           >
                           <ul class="sub">
-                            <li><a href="#">VIDEO</a></li>
+                            <li><a href="./videos.html">VIDEO</a></li>
                             <li><a href="#">AUDIO</a></li>
                           </ul>
                         </li>
 
                         <!-- MENU ITEM -->
-                        <li class="parent current">
+                        <li class="parent">
                           <a href="./videos.html"
                             ><div class="main-menu-title">VIDEO</div></a
                           >
@@ -187,38 +187,40 @@
           <!-- END header-wrapper -->
         </header>
         <!-- PAGE TITLE SMALL -->
-        <div class="page-title-cont page-title-small grey-light-bg">
+        <div class="page-title-cont page-title-small">
           <div class="relative container align-left">
             <div class="row">
               <div class="col-md-8">
-                <h1 class="page-title">PORTFOLIO</h1>
+                <h1 class="page-title text-light">VIDEOS</h1>
               </div>
 
               <div class="col-md-4">
-                <div class="breadcrumbs">
-                  <a href="index.html">Home</a
-                  ><span class="slash-divider">/</span
-                  ><span class="bread-current">VIDEOS</span>
+                <div class="breadcrumbs text-light">
+                  <a href="index.html" class="text-light">Home</a
+                  ><span class="slash-divider text-light">/</span
+                  ><span class="bread-current text-light">VIDEOS</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="grey-light-bg plr-30 plr-0-767 clearfix mb-80">
+        <div class="plr-30 plr-0-767 clearfix mb-80">
           <!-- COTENT CONTAINER -->
-          <div class="white-bg pt-50">
+          <div class="pt-50">
             <div class="relative">
               <!-- PORTFOLIO FILTER -->
               <div class="port-filter text-center text-left-767">
-                <a href="#" class="filter active" data-filter="*"
+                <a href="#" class="filter active text-light" data-filter="*"
                   >All Projects</a
                 >
-                <a href="#" class="filter" data-filter=".development"
+                <a href="#" class="filter text-light" data-filter=".development"
                   >CATEGORY 1</a
                 >
-                <a href="#" class="filter" data-filter=".design">CATEGORY 3</a>
-                <a href="#" class="filter" data-filter=".photography"
+                <a href="#" class="filter text-light" data-filter=".design"
+                  >CATEGORY 3</a
+                >
+                <a href="#" class="filter text-light" data-filter=".photography"
                   >CATEGORY 3</a
                 >
               </div>
@@ -226,8 +228,16 @@
                 id="items-grid"
                 class="port-grid display-hover-on-mobile port-grid-3 masonry clearfix"
               >
-                <!-- Item 2 big -->
-                <li role="button" class="port-item mix">
+                <div class="flex-col-center spinner">
+                  <h1 class="text-light">Loading</h1>
+                  <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <!-- <li role="button" class="port-item mix">
                   <a href="portfolio-single1.html">
                     <div class="port-img-overlay">
                       <img
@@ -283,7 +293,6 @@
                   </div>
                 </li>
 
-                <!-- Item 5 big -->
                 <li role="button" class="port-item mix">
                   <a href="portfolio-single1.html">
                     <div class="port-img-overlay">
@@ -316,7 +325,6 @@
                   </div>
                 </li>
 
-                <!-- Item 4 big -->
                 <li role="button" class="port-item mix">
                   <a href="portfolio-single1.html">
                     <div class="port-img-overlay">
@@ -349,7 +357,6 @@
                   </div>
                 </li>
 
-                <!-- Item 3 -->
                 <li role="button" class="port-item mix">
                   <a href="portfolio-single1.html">
                     <div class="port-img-overlay">
@@ -384,7 +391,6 @@
                   </div>
                 </li>
 
-                <!-- Item 6 -->
                 <li role="button" class="port-item mix">
                   <a href="portfolio-single1.html">
                     <div class="port-img-overlay">
@@ -417,7 +423,7 @@
                       ></a>
                     </div>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
