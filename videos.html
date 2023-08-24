@@ -111,7 +111,7 @@
                     <nav class="collapse collapsing navbar-collapse right-1024">
                       <ul class="nav navbar-nav">
                         <!-- MENU ITEM -->
-                        <li class="parent current">
+                        <li class="parent">
                           <a href="index.html"
                             ><div class="main-menu-title">HOME</div></a
                           >
@@ -129,19 +129,8 @@
                           >
                         </li>
 
-                        <!-- MEGA MENU ITEM -->
-                        <li class="parent">
-                          <a href="#"
-                            ><div class="main-menu-title">WORK</div></a
-                          >
-                          <ul class="sub">
-                            <li><a href="./videos.html">VIDEO</a></li>
-                            <li><a href="#">AUDIO</a></li>
-                          </ul>
-                        </li>
-
                         <!-- MENU ITEM -->
-                        <li class="parent">
+                        <li class="parent current">
                           <a href="./videos.html"
                             ><div class="main-menu-title">VIDEO</div></a
                           >
@@ -149,7 +138,7 @@
 
                         <!-- MENU ITEM -->
                         <li class="parent">
-                          <a href="#"
+                          <a href="audio.html"
                             ><div class="main-menu-title">AUDIO</div></a
                           >
                         </li>
@@ -188,29 +177,32 @@
         </header>
         <!-- PAGE TITLE SMALL -->
         <div class="page-title-cont page-title-small">
-          <div class="relative container align-left">
-            <div class="row">
-              <div class="col-md-8">
-                <h1 class="page-title text-light">VIDEOS</h1>
-              </div>
-
-              <div class="col-md-4">
-                <div class="breadcrumbs text-light">
-                  <a href="index.html" class="text-light">Home</a
-                  ><span class="slash-divider text-light">/</span
-                  ><span class="bread-current text-light">VIDEOS</span>
-                </div>
+          <div class="video-banner relative">
+            <video autoplay muted playsinline loop preload>
+              <source src="./videos/video-banner.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="container align-left">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="page-title text-light">VIDEOS</h1>
+            </div>
+            <div class="col-md-4">
+              <div class="breadcrumbs text-light">
+                <a href="index.html" class="text-light">Home</a
+                ><span class="slash-divider text-light">/</span
+                ><span class="bread-current text-light">VIDEOS</span>
               </div>
             </div>
           </div>
         </div>
-
         <div class="plr-30 plr-0-767 clearfix mb-80">
           <!-- COTENT CONTAINER -->
           <div class="pt-50">
             <div class="relative">
               <!-- PORTFOLIO FILTER -->
-              <div class="port-filter text-center text-left-767">
+              <!-- <div class="port-filter text-center text-left-767">
                 <a href="#" class="filter active text-light" data-filter="*"
                   >All Projects</a
                 >
@@ -223,7 +215,7 @@
                 <a href="#" class="filter text-light" data-filter=".photography"
                   >CATEGORY 3</a
                 >
-              </div>
+              </div> -->
               <ul
                 id="items-grid"
                 class="port-grid display-hover-on-mobile port-grid-3 masonry clearfix"
