@@ -3400,7 +3400,7 @@ nav ul {
   background: none !important;
 }
 .navbar-collapse.right {
-	border:none;
+	/* border:none; */
 }
 
 /* #PRIMARY MENU
@@ -7606,12 +7606,12 @@ h2.portfolio-timeline-title {
   Max Width "991px" - Min Width "768px"
 *******************************************************************************/
 @media (min-width: 768px) and (max-width: 1024px) {
-  #main-menu .navbar-collapse.collapse {
+  /* #main-menu .navbar-collapse.collapse {
     display: none !important;
   }
   #main-menu .navbar-collapse.collapse.in {
     display: block !important;
-  }
+  } */
   .navbar-nav{float:none}
   .navbar-nav>li{float:none}  
 
@@ -9411,7 +9411,7 @@ img.mfp-img {
     margin-bottom: -5px;
   }
   #header-left #main-menu .navbar-collapse.collapse {
-    display: none !important;
+    /* display: none !important; */
   }
   #header-left .right-1024 {
     float: none;
