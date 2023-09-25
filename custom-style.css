@@ -1,13 +1,13 @@
 body {
   background-color: black !important;
 }
-.relative{
+.relative {
   position: relative;
 }
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
-  align-self: center;;
+  align-self: center;
 }
 .text-light,
 p,
@@ -164,23 +164,93 @@ a {
   background-position: -5px -5px;
   background-size: 22px 22px;
   content: "";
-  height: 40px;
+  height: 220px;
   margin-top: 20px;
   width: 100%;
 }
-body.is-playing-radio .dots {
+.dot-container.is-playing-radio .dots {
   background-image: radial-gradient(
     #fff calc(30% + 1px),
     transparent calc(30% + 2px)
   );
 }
-
-.audio-container {
-  height: 418px;
-  width: 650px;;
+.play-pause-icon-container {
+  cursor: pointer;
 }
 .audio-button-container {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+.play-pause-icon-container {
+  height: 100px;
+  width: 100px;
+  margin-right: 5rem;
+  min-height: 100px;
+  min-width: 100px;
+}
+.hidden {
+  display: none;
+}
+.audio-title {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  line-height: normal;
+  margin-top: 1.5rem;
+}
+.audio-time {
+  margin: 0 3rem 0 0;
+}
+.dot-container {
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.audio-container {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .dot-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.audio-box {
+  background-color: rgb(34, 34, 34);
+  height: 100%;
+  display: flex;
+  padding: 3rem;
+  width: 100%;
+  border-radius: 4px;
+  align-items: center;
+}
+.audio-title-2 {
+  font-size: 2rem;
+  margin: 1rem 2rem 1rem 0;
+  min-width: 50%;
+}
+p {
+  line-height: normal;
+}
+.grid-cols-4 {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.audio-item {
+  width: 100%;
+  margin: 10px 0 !important;
+  overflow: hidden;
+}
+.audio-item:hover {
+  transition: transform 0.1s ease-in;
+  transform: translateY(-10px);
+}
+.audio-id {
+  margin-right: 5px;
+}
+.audio-item audio {
+  /* display: none; */
 }

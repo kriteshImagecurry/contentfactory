@@ -58,6 +58,7 @@
     <!-- ANIMATE -->
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="custom-style.css" />
+    <script src="audio-script.js"></script>
   </head>
   <body>
     <!-- LOADER -->
@@ -109,7 +110,7 @@
                     <nav class="collapse collapsing navbar-collapse right-1024">
                       <ul class="nav navbar-nav">
                         <!-- MENU ITEM -->
-                        <li class="  current">
+                        <li class="current">
                           <a href="index.html"
                             ><div class="main-menu-title">HOME</div></a
                           >
@@ -155,7 +156,7 @@
                         </li>
 
                         <!-- MENU ITEM -->
-                        <li id="menu-contact-info-big" class="  megamenu">
+                        <li id="menu-contact-info-big" class="megamenu">
                           <a href="./contact.html"
                             ><div class="main-menu-title">CONTACT</div></a
                           >
@@ -190,8 +191,68 @@
             </div>
           </div>
         </div>
-
         <div class="plr-30 plr-0-767 clearfix">
+          <div class="plr-30 pt-50 pb-20">
+            <div class="flex audio-container">
+              <div class="play-pause-icon-container" onClick="toggleAudioPlay">
+                <svg
+                  version="1.1"
+                  id="play-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                  fill="white"
+                  class="play-icon"
+                  onClick="toggleAudioPlay"
+                >
+                  <g>
+                    <path
+                      d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M256,490.667
+                     C126.604,490.667,21.333,385.396,21.333,256S126.604,21.333,256,21.333S490.667,126.604,490.667,256S385.396,490.667,256,490.667
+                     z"
+                    />
+                    <path
+                      d="M357.771,247.031l-149.333-96c-3.271-2.135-7.5-2.25-10.875-0.396C194.125,152.51,192,156.094,192,160v192
+                     c0,3.906,2.125,7.49,5.563,9.365c1.583,0.865,3.354,1.302,5.104,1.302c2,0,4.021-0.563,5.771-1.698l149.333-96
+                     c3.042-1.958,4.896-5.344,4.896-8.969S360.813,248.99,357.771,247.031z M213.333,332.458V179.542L332.271,256L213.333,332.458z"
+                    />
+                  </g>
+                </svg>
+                <svg
+                  enable-background="0 0 512 512"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  class="pause-icon"
+                  onClick="toggleAudioPlay"
+                >
+                  <path
+                    d="m423.938 88.062c-44.858-44.858-104.5-69.562-167.938-69.562s-123.08 24.704-167.938 69.562-69.562 104.5-69.562 167.938 24.704 123.08 69.562 167.938 104.5 69.562 167.938 69.562 123.08-24.704 167.938-69.562 69.562-104.5 69.562-167.938-24.704-123.08-69.562-167.938zm-167.938 380.438c-117.173 0-212.5-95.327-212.5-212.5s95.327-212.5 212.5-212.5 212.5 95.327 212.5 212.5-95.327 212.5-212.5 212.5zm-36.25-302.485v179.971c0 6.903-5.597 12.5-12.5 12.5s-12.5-5.597-12.5-12.5v-179.971c0-6.903 5.597-12.5 12.5-12.5s12.5 5.596 12.5 12.5zm97.5 0v179.971c0 6.903-5.597 12.5-12.5 12.5s-12.5-5.597-12.5-12.5v-179.971c0-6.903 5.597-12.5 12.5-12.5s12.5 5.596 12.5 12.5z"
+                  />
+                </svg>
+              </div>
+              <div class="">
+                <p>Now playing</p>
+                <p class="audio-title">Audio name</p>
+                <div class="flex">
+                  <!-- <p class="audio-time">00:00</p> -->
+                  <p class="audio-category">Creative</p>
+                </div>
+              </div>
+            </div>
+            <div class="port-img-overlay dot-container relative flex-center">
+              <div class="dots" role="presentation"></div>
+              <div class="dots" role="presentation"></div>
+              <div class="dots" role="presentation"></div>
+              <div class="dots" role="presentation"></div>
+            </div>
+          </div>
+        </div>
+        <div class="plr-30 plr-0-767">
           <!-- COTENT CONTAINER -->
           <div class="plr-30 pt-50 pb-20">
             <div class="relative">
@@ -212,302 +273,7 @@
               </div>
 
               <!-- ITEMS GRID -->
-              <ul
-                class="port-grid display-hover-on-mobile port-grid-3 port-grid-gut clearfix"
-                id="items-grid"
-              >
-                <!-- Item 1 -->
-                <li role="button" class="port-item mix creative">
-                  <div
-                    class="port-img-overlay audio-container relative flex-center"
-                  >
-                    <div class="dots-container">
-                      <div class="dots" role="presentation"></div>
-                      <div class="dots" role="presentation"></div>
-                      <div class="dots" role="presentation"></div>
-                      <div class="dots" role="presentation"></div>
-                    </div>
-                    <div class="audio-button-container flex-center">
-                      <h1>asd</h1>
-                    </div>
-                  </div>
-
-                  <!-- Item 2 -->
-                </li>
-
-                <li role="button" class="port-item mix multicultural">
-                  <a href="portfolio-single1.html">
-                    <div class="port-img-overlay">
-                      <img
-                        class="port-main-img"
-                        src="images/portfolio/projects-3.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </a>
-                  <div class="port-overlay-cont">
-                    <div class="port-title-cont">
-                      <h3><a href="portfolio-single1.html">CALENDAR</a></h3>
-                      <span
-                        ><a href="#">musicBased</a
-                        ><span class="slash-divider">/</span
-                        ><a href="#">media</a></span
-                      >
-                    </div>
-                    <div class="port-btn-cont">
-                      <span class="popup-multi-gallery">
-                        <a
-                          href="images/portfolio/projects-3.jpg"
-                          class="lightbox-item mr-20"
-                          ><div aria-hidden="true" class="icon_search"></div
-                        ></a>
-                        <a href="images/blog/post-prev-1.jpg"></a>
-                        <a href="images/blog/post-prev-2.jpg"></a>
-                        <a href="images/blog/post-prev-3.jpg"></a>
-                      </span>
-                      <a href="portfolio-single1.html"
-                        ><div aria-hidden="true" class="icon_link"></div
-                      ></a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Item 3 -->
-                <li role="button" class="port-item mix musicBased">
-                  <a href="portfolio-single1.html">
-                    <div class="port-img-overlay">
-                      <img
-                        class="port-main-img"
-                        src="images/portfolio/projects-15.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </a>
-                  <div class="port-overlay-cont">
-                    <div class="port-title-cont">
-                      <h3>
-                        <a href="portfolio-single1.html">EYES OF THE CAR</a>
-                      </h3>
-                      <span
-                        ><a href="#">branding</a
-                        ><span class="slash-divider">/</span
-                        ><a href="#">marketing</a></span
-                      >
-                    </div>
-                    <div class="port-btn-cont">
-                      <span class="popup-multi-gallery">
-                        <a
-                          href="images/portfolio/projects-15.jpg"
-                          class="lightbox-item mr-20"
-                          ><div aria-hidden="true" class="icon_search"></div
-                        ></a>
-                        <a href="images/portfolio/car-2.jpg"></a>
-                        <a href="images/portfolio/car-3.jpg"></a>
-                        <a href="images/portfolio/car-4.jpg"></a>
-                      </span>
-                      <a href="portfolio-single1.html"
-                        ><div aria-hidden="true" class="icon_link"></div
-                      ></a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Item 4 -->
-                <li role="button" class="port-item mix creative">
-                  <a href="portfolio-single1.html">
-                    <div class="port-img-overlay">
-                      <img
-                        class="port-main-img"
-                        src="images/portfolio/projects-6.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </a>
-                  <div class="port-overlay-cont">
-                    <div class="port-title-cont">
-                      <h3><a href="portfolio-single1.html">NOW IS NOW</a></h3>
-                      <span
-                        ><a href="#">multicultural</a
-                        ><span class="slash-divider">/</span
-                        ><a href="#">musicBased</a></span
-                      >
-                    </div>
-                    <div class="port-btn-cont">
-                      <span class="popup-multi-gallery">
-                        <a
-                          href="images/portfolio/projects-6.jpg"
-                          class="lightbox-item mr-20"
-                          ><div aria-hidden="true" class="icon_search"></div
-                        ></a>
-                        <a href="images/portfolio/projects-6.jpg"></a>
-                        <a href="images/portfolio/projects-6-box.jpg"></a>
-                        <a href="images/portfolio/projects-8.jpg"></a>
-                      </span>
-                      <a href="portfolio-single1.html"
-                        ><div aria-hidden="true" class="icon_link"></div
-                      ></a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Item 5 -->
-                <li role="button" class="port-item mix multicultural">
-                  <a href="portfolio-single1.html">
-                    <div class="port-img-overlay">
-                      <img
-                        class="port-main-img"
-                        src="images/portfolio/projects-7.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </a>
-                  <div class="port-overlay-cont">
-                    <div class="port-title-cont">
-                      <h3>
-                        <a href="portfolio-single1.html">EYES OF THE CAR</a>
-                      </h3>
-                      <span
-                        ><a href="#">ui elements</a
-                        ><span class="slash-divider">/</span
-                        ><a href="#">media</a></span
-                      >
-                    </div>
-                    <div class="port-btn-cont">
-                      <span class="popup-multi-gallery">
-                        <a
-                          href="images/portfolio/projects-7.jpg"
-                          class="lightbox-item mr-20"
-                          ><div aria-hidden="true" class="icon_search"></div
-                        ></a>
-                        <a href="images/portfolio/projects-9.jpg"></a>
-                        <a href="images/portfolio/projects-10.jpg"></a>
-                        <a href="images/portfolio/projects-11.jpg"></a>
-                      </span>
-                      <a href="portfolio-single1.html"
-                        ><div aria-hidden="true" class="icon_link"></div
-                      ></a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Item 6 -->
-                <li role="button" class="port-item mix musicBased">
-                  <a href="portfolio-single1.html">
-                    <div class="port-img-overlay">
-                      <img
-                        class="port-main-img"
-                        src="images/portfolio/projects-4.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </a>
-                  <div class="port-overlay-cont">
-                    <div class="port-title-cont">
-                      <h3>
-                        <a href="portfolio-single1.html">EYES OF THE CAR</a>
-                      </h3>
-                      <span
-                        ><a href="#">branding</a
-                        ><span class="slash-divider">/</span
-                        ><a href="#">marketing</a></span
-                      >
-                    </div>
-                    <div class="port-btn-cont">
-                      <span class="popup-multi-gallery">
-                        <a
-                          href="images/portfolio/projects-4.jpg"
-                          class="lightbox-item mr-20"
-                          ><div aria-hidden="true" class="icon_search"></div
-                        ></a>
-                        <a href="images/blog/post-prev-4.jpg"></a>
-                        <a href="images/blog/post-prev-5.jpg"></a>
-                        <a href="images/blog/post-prev-6.jpg"></a>
-                      </span>
-                      <a href="portfolio-single1.html"
-                        ><div aria-hidden="true" class="icon_link"></div
-                      ></a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Item 7 -->
-                <li role="button" class="port-item mix creative">
-                  <a href="portfolio-single1.html">
-                    <div class="port-img-overlay">
-                      <img
-                        class="port-main-img"
-                        src="images/portfolio/projects-11.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </a>
-                  <div class="port-overlay-cont">
-                    <div class="port-title-cont">
-                      <h3><a href="portfolio-single1.html">NOW IS NOW</a></h3>
-                      <span
-                        ><a href="#">multicultural</a
-                        ><span class="slash-divider">/</span
-                        ><a href="#">musicBased</a></span
-                      >
-                    </div>
-                    <div class="port-btn-cont">
-                      <span class="popup-multi-gallery">
-                        <a
-                          href="images/portfolio/projects-11.jpg"
-                          class="lightbox-item mr-20"
-                          ><div aria-hidden="true" class="icon_search"></div
-                        ></a>
-                        <a href="images/portfolio/projects-12.jpg"></a>
-                        <a href="images/portfolio/projects-13.jpg"></a>
-                        <a href="images/portfolio/projects-14.jpg"></a>
-                      </span>
-                      <a href="portfolio-single1.html"
-                        ><div aria-hidden="true" class="icon_link"></div
-                      ></a>
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Item 8 -->
-                <li role="button" class="port-item mix multicultural">
-                  <a href="portfolio-single1.html">
-                    <div class="port-img-overlay">
-                      <img
-                        class="port-main-img"
-                        src="images/portfolio/projects-1.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </a>
-                  <div class="port-overlay-cont">
-                    <div class="port-title-cont">
-                      <h3>
-                        <a href="portfolio-single1.html">EYES OF THE CAR</a>
-                      </h3>
-                      <span
-                        ><a href="#">ui elements</a
-                        ><span class="slash-divider">/</span
-                        ><a href="#">media</a></span
-                      >
-                    </div>
-                    <div class="port-btn-cont">
-                      <span class="popup-multi-gallery">
-                        <a
-                          href="images/portfolio/projects-1.jpg"
-                          class="lightbox-item mr-20"
-                          ><div aria-hidden="true" class="icon_search"></div
-                        ></a>
-                        <a href="images/blog/post-prev-1.jpg"></a>
-                        <a href="images/blog/post-prev-2.jpg"></a>
-                        <a href="images/blog/post-prev-3.jpg"></a>
-                      </span>
-                      <a href="portfolio-single1.html"
-                        ><div aria-hidden="true" class="icon_link"></div
-                      ></a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <div class="grid-cols-4" id="items-grid2"></div>
             </div>
           </div>
         </div>
