@@ -129,15 +129,15 @@ window.onload = function () {
   const template = (id, title, path, category) => {
     const audioId = title.split(" ").join("-").toLowerCase();
     return `
-<div role="button" class="audio-item mix ${category}" onclick="playAudio('${audioId}','${title}','${category}')">
-  <div class="audio-box">
-        <span class="audio-id">${id + 1})  </span> 
-      <p class="audio-title-2">${title}</p>
-      <audio controls id="${audioId}">
-          <source src="${path}">
-      </audio>
-  </div>
- </div>`;
+            <div role="button" class="audio-item mix ${category}" onclick="playAudio('${audioId}','${title}','${category}')">
+              <div class="audio-box">
+                  <span class="audio-id">${id + 1})  </span> 
+                  <p class="audio-title-2">${title}</p>
+                  <audio controls id="${audioId}" class="audio-track">
+                      <source src="${path}">
+                  </audio>
+              </div>
+            </div>`;
   };
   const audioArray1 = multicultural.map((audio, i) =>
     template(i, audio.title, audio.path, "multicultural")
@@ -199,7 +199,14 @@ function initWorkFilter2() {
     });
   })(jQuery);
 }
+function pauseAllAudio() {
+  let allAudioList = document.getElementsByClassName("audio-track");
+  Array.from(allAudioList).forEach((aud) => {
+    if (!aud.paused) aud.pause();
+  });
+}
 function playAudio(audioId, title, category) {
+  pauseAllAudio();
   let audio = document.getElementById(`${audioId}`);
   if (audio.paused) {
     audio.play();

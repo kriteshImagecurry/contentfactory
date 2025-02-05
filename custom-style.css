@@ -254,3 +254,142 @@ p {
 .audio-item audio {
   /* display: none; */
 }
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.min-h-\[80vh\] {
+  min-height: 80vh;
+}
+
+.gap-1 {
+  gap: 0.25rem; /* 1 = 0.25rem */
+}
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+.text-6xl {
+  font-size: 3.75rem; /* 6xl size in Tailwind */
+}
+
+.font-extrabold {
+  font-weight: 800; /* Tailwind's extrabold is 800 */
+}
+.text-4xl {
+  font-size: 2.25rem; /* 4xl size in Tailwind */
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-5xl {
+    font-size: 3rem; /* 5xl size in Tailwind */
+  }
+}
+.flex {
+  display: flex;
+}
+
+.h-min {
+  height: min-content;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.relative {
+  position: relative;
+}
+.p-24 {
+  padding: 6rem; /* 24 * 0.25rem (1rem = 16px) */
+}
+.h-min {
+  height: min-content;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+.top-half {
+  top: 50%;
+}
+.right-0 {
+  right: 0;
+}
+.flex {
+  display: flex;
+}
+.translate-y-half {
+  transform: translateY(-50%);
+}
+.h-min {
+  height: min-content;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.relative {
+  position: relative;
+}
+.w-screen {
+  width: 100vw;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.acc-container {
+  display: flex;
+  flex-wrap: wrap ;
+  justify-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.acc-container img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
