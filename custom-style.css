@@ -273,6 +273,11 @@ p {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+@media (min-width: 1920px) {
+  .xxl\:grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 
 .min-h-\[80vh\] {
   min-height: 80vh;

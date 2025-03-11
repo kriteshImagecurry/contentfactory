@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .video-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px;
+            gap: 10px;
+            background: #fff;
+        }
+        video {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container" id="videoContainer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoContainer = document.getElementById("videoContainer");
+            const videoFolder = "videos/";  // Folder where videos are stored
+            const videoCount = 10; // Adjust based on how many videos you expect
+            
+            for (let i = 1; i <= videoCount; i++) {
+                let videoNumber = i.toString().padStart(3, '0'); // Format: 001, 002, etc.
+                let videoSrc = `${videoFolder}${videoNumber}.mp4`;
+                
+                let videoElement = document.createElement("video");
+                videoElement.src = videoSrc;
+                videoElement.controls = true;
+                videoElement.onerror = function() {
+                    this.style.display = "none"; // Hide if video doesn't exist
+                };
+                
+                videoContainer.appendChild(videoElement);
+            }
+        });
+    </script>
+</body>
+</html>
