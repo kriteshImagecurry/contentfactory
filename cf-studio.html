@@ -178,10 +178,22 @@
         </header>
         <div class="page-title-cont page-title-small"></div>
         <div class="plr-30 plr-0-767 clearfix">
-          <div
-            id="cf-studio-video-container"
-            class="plr-30 pt-50 pb-20 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 min-h-[80vh] gap-1"
-          ></div>
+          <div id="cf-studio-video-container">
+            <ul
+              id="items-grid"
+              class="port-grid display-hover-on-mobile port-grid-3 masonry clearfix"
+            >
+              <div class="flex-col-center spinner">
+                <h1 class="text-light">Loading</h1>
+                <div class="lds-ring">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </ul>
+          </div>
         </div>
         <footer class="page-section pb-50 footer2-black">
           <div class="container">

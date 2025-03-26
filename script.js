@@ -1,5 +1,6 @@
-const VIMEO_ENDPOINT = "https://api.vimeo.com/me/videos";
-const ACCESS_TOKEN = "e307d7b6fa503c44eb2a9d73ba3721b0"; // Replace with your access token
+const VIMEO_ENDPOINT =
+  "https://api.vimeo.com/users/137072612/projects/24653756/videos";
+const ACCESS_TOKEN = "6959086004ae63ad423ba6e475aa98ce"; // Replace with your access token
 
 async function fetchVimeoVideos() {
   const response = await fetch(VIMEO_ENDPOINT, {

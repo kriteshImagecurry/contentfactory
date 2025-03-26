@@ -52,7 +52,8 @@ a {
 }
 
 @media screen and (max-width: 700px) {
-  .video-container iframe {
+  .video-container iframe,
+  #cf-studio-video-container {
     padding: 0 2rem;
   }
   .video-container {
@@ -388,7 +389,7 @@ p {
 }
 .acc-container {
   display: flex;
-  flex-wrap: wrap ;
+  flex-wrap: wrap;
   justify-items: center;
   justify-content: center;
   gap: 12px;
@@ -397,4 +398,8 @@ p {
   height: 300px;
   width: 300px;
   object-fit: contain;
+}
+#cf-studio-video-container iframe {
+  height: 100% !important;
+  width: 100% !important;
 }
