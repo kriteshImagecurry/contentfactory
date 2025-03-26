@@ -1,5 +1,5 @@
 const VIMEO_ENDPOINT =
-  "https://api.vimeo.com/users/137072612/projects/24653756/videos";
+  "https://api.vimeo.com/users/137072612/projects/24653756/videos?per_page=100";
 const ACCESS_TOKEN = "6959086004ae63ad423ba6e475aa98ce"; // Replace with your access token
 
 async function fetchVimeoVideos() {
@@ -65,3 +65,22 @@ const redirectToVideo = (url) => {
   var baseUrl = `video-page.html?player_embed_url=${url}`;
   window.location.href = baseUrl;
 };
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyLoadIframes = () => {
+    const iframes = document.querySelectorAll("iframe[data-src]");
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const iframe = entry.target;
+          iframe.src = iframe.getAttribute("data-src");
+          iframe.removeAttribute("data-src");
+          observer.unobserve(iframe);
+        }
+      });
+    });
+
+    iframes.forEach((iframe) => observer.observe(iframe));
+  };
+
+  lazyLoadIframes();
+});

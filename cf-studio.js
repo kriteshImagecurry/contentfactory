@@ -56,7 +56,7 @@ async function showVideos(links) {
 
 // fetchVideos();
 const VIMEO_ENDPOINT =
-  "https://api.vimeo.com/users/137072612/projects/24653734/videos";
+  "https://api.vimeo.com/users/137072612/projects/24653734/videos?per_page=100";
 const ACCESS_TOKEN = "6959086004ae63ad423ba6e475aa98ce"; // Replace with your access token
 
 async function fetchVimeoVideos() {
@@ -83,7 +83,7 @@ fetchVimeoVideos().then((videos) => {
     const template = `<div style="height:100%;width:100%;aspect-ratio:9 / 16">${embed.html}</div>`;
     return template;
   });
-  const divs = `<div class="plr-30 pt-50 pb-20 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 min-h-[80vh] gap-1">
+  const divs = `<div style='width:100vw;overflow-x:scroll;display:flex;aspect-ratio:9 / 16;height:600px' class="plr-30 pt-50 pb-20 gap-1">
 ${videoArray.join("")} 
   </div>`;
   console.log(divs);
@@ -91,4 +91,23 @@ ${videoArray.join("")}
   const $itemGrid = $("#cf-studio-video-container");
   $itemGrid.html(divs);
   initMasonry();
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyLoadIframes = () => {
+    const iframes = document.querySelectorAll("iframe[data-src]");
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const iframe = entry.target;
+          iframe.src = iframe.getAttribute("data-src");
+          iframe.removeAttribute("data-src");
+          observer.unobserve(iframe);
+        }
+      });
+    });
+
+    iframes.forEach((iframe) => observer.observe(iframe));
+  };
+
+  lazyLoadIframes();
 });
